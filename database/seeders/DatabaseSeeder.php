@@ -14,8 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        // \App\Models\Table::factory()->create();
+        \App\Models\Table::factory()->create();
 
         $table = DB::table('tables')->first();
 
@@ -35,7 +34,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Content::factory()->create([
             'table_id' => $table->id,
-            'row_index' => 3,
+            'row_index' => 2,
             'column_index' => 0,
             'content' => 'B2B Marketplace'
         ]);
